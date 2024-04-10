@@ -37,7 +37,7 @@ const WeatherApp = () => {
             </div>
         </div>
         <div className="weather_image">
-            <img src={cloudy_day} alt="alperen weather app" />    
+            <img src={cloudy_day} alt="alperen weather app deneme WE-01" />    
         </div>
         <div className="weather_temp">
             24°C
