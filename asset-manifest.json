@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/weather_app/static/css/main.90965716.css",
+    "main.js": "/weather_app/static/js/main.8f0261ae.js",
+    "static/js/453.0ccb7fb4.chunk.js": "/weather_app/static/js/453.0ccb7fb4.chunk.js",
+    "static/media/Clear_N.png": "/weather_app/static/media/Clear_N.2c6436386dfa490d18b0.png",
+    "static/media/Cloudy_D.png": "/weather_app/static/media/Cloudy_D.0ef60b37d2558531ca10.png",
+    "static/media/FewClouds_D.png": "/weather_app/static/media/FewClouds_D.ed87612812d834606b61.png",
+    "static/media/Rain_D.png": "/weather_app/static/media/Rain_D.9e68a182d1855687a523.png",
+    "static/media/Clear_D.png": "/weather_app/static/media/Clear_D.5b5fa48b3355324b4b30.png",
+    "static/media/Rain_N.png": "/weather_app/static/media/Rain_N.009b4ed3761606a2c16b.png",
+    "static/media/Storm_D.png": "/weather_app/static/media/Storm_D.08d50709002d3b8a3ed2.png",
+    "static/media/Cloudy_N.png": "/weather_app/static/media/Cloudy_N.019401a689d1a03e06d0.png",
+    "static/media/Storm_N.png": "/weather_app/static/media/Storm_N.2e585b83acc018f48a4a.png",
+    "static/media/Weather=Few clouds, Moment=Day.png": "/weather_app/static/media/Weather=Few clouds, Moment=Day.7ad742c43dda59d23ead.png",
+    "static/media/Weather=Clear, Moment=Day.png": "/weather_app/static/media/Weather=Clear, Moment=Day.566ed175e3394aa8311d.png",
+    "static/media/FewClouds_N.png": "/weather_app/static/media/FewClouds_N.d7d4bf18b1307eb967fa.png",
+    "static/media/Weather=Storm, Moment=Night.png": "/weather_app/static/media/Weather=Storm, Moment=Night.d0485844febe36ad7242.png",
+    "static/media/Weather=Storm, Moment=Day.png": "/weather_app/static/media/Weather=Storm, Moment=Day.5c49613fa6307be1ac5b.png",
+    "static/media/Weather=Few clouds, Moment=Night.png": "/weather_app/static/media/Weather=Few clouds, Moment=Night.198cbca43f7509cca371.png",
+    "static/media/Weather=Clear, Moment=Night.png": "/weather_app/static/media/Weather=Clear, Moment=Night.5a0171a4bef050969563.png",
+    "static/media/Weather=Cloudy, Moment=Night.png": "/weather_app/static/media/Weather=Cloudy, Moment=Night.266c4ddabe8ae3a9c61f.png",
+    "static/media/Weather=Rain, Moment=Night.png": "/weather_app/static/media/Weather=Rain, Moment=Night.edb917b4c6008842a89d.png",
+    "static/media/Background.png": "/weather_app/static/media/Background.7dd032188ff252c0561c.png",
+    "index.html": "/weather_app/index.html",
+    "main.90965716.css.map": "/weather_app/static/css/main.90965716.css.map",
+    "main.8f0261ae.js.map": "/weather_app/static/js/main.8f0261ae.js.map",
+    "453.0ccb7fb4.chunk.js.map": "/weather_app/static/js/453.0ccb7fb4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90965716.css",
+    "static/js/main.8f0261ae.js"
+  ]
+}
