@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Özellikler
+-Responsive tasarım
+-Tek tıkla bulunduğun konuma göre hava durumu
+-Hava durumu sorgulama
+-Mevcut hava durumunu yansıtan görseller
+-Axios kullanımı
+
+Yayınlanmış Proje Linki:<https://orange-mushroom-076a0fa03-preview.westeurope.5.azurestaticapps.net/>

@@ -30,7 +30,7 @@ import logo from '../Assets/Logo.png'
 import search_icon from '../Assets/magnifying-glass.png'
 import gps from '../Assets/gps.png'
 import arrow from '../Assets/arrow-left.png'
-import {Text, Table, Tbody, Tr, Td, TableContainer, Box, Grid, GridItem, Image, } from '@chakra-ui/react'
+import { Text, Table, Tbody, Tr, Td, TableContainer, Box, Grid, GridItem, Image, } from '@chakra-ui/react'
 
 const WeatherApp = () => {
   let api_key = "e51b5988d14ace6cf8ee1ce8935155aa";
@@ -41,7 +41,6 @@ const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [currentForecastData, setCurrentForecastData] = useState(null);
   const [forecastData, setForecastData] = useState(null);
-
 
   const search = async () => {
     const element = document.getElementsByClassName("cityInput")
@@ -87,7 +86,6 @@ const WeatherApp = () => {
 
       const icon = iconMap[data.weather[0].icon];
       setWicon(icon);
-
       setLoading(false);
 
     } catch (error) {
@@ -189,8 +187,6 @@ const WeatherApp = () => {
           <Image boxSize='50px' src={logo}></Image>
           <Text marginLeft="4" color='white' fontSize='3xl'>AlpWeather</Text>
         </Box>
-
-
         <div className="topbar" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Text fontSize='2xl' color="white" align="center">
             Welcome to  <span style={{ color: "#8FB2F5" }}>AlpWeather</span>
@@ -206,7 +202,6 @@ const WeatherApp = () => {
             </div>
           </div>
         </div></div> : <></>}
-
       </div>
       <div className="weather_results"> {state === "Searched" && weatherData ? <div>
         <Grid templateColumns="repeat(2, 1fr)" templateRows="repeat(2, 1fr)" gap={6} bgImage={backgroundImage} borderRadius="20">
@@ -297,7 +292,7 @@ const WeatherApp = () => {
         <div>
           {state === "Searched" && (
             <div style={{ display: "flex", justifyContent: "center" }}>
-              <div style={{marginTop: "24px"}}>
+              <div style={{ marginTop: "24px" }}>
                 <button onClick={resetState} gap="5px" className="backWardButton" >
                   <img src={arrow} alt="" /></button>
               </div>

@@ -1,37 +1,41 @@
 .container {
- width: 100%;
- height: 100%;
- margin: auto;
- border-radius: 12px;
- background-image: url("Background.png");
- padding: 24px;
- 
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 12px;
+    background-image: url("Background.png");
+    padding: 24px;
 }
-.topbar{
+
+.topbar {
     display: flex;
     justify-content: center;
     gap: 14px;
     padding-top: 300px;
     padding-bottom: 100%;
 }
-.topbar input{
+
+.topbar input {
     display: flex;
     width: 311px;
     height: 78px;
     border: none;
     outline: none;
-    background:  #404054;
+    background: #404054;
     border-radius: 40px;
     padding-left: 40px;
 }
+
 .searchContainer {
     display: flex;
     align-items: center;
 }
+
 .cityInput_Container {
-    flex: 1; 
+    flex: 1;
 }
-button{
+
+button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +44,8 @@ button{
     height: 78px;
     background-color: #404054;
     padding-top: 10px;
-    
-  }
+}
+
 .search_icon {
     display: flex;
     justify-content: center;
@@ -50,9 +54,9 @@ button{
     width: 78px;
     height: 78px;
     background-color: #404054;
-    
 }
-.backWardButton{
+
+.backWardButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +64,6 @@ button{
     width: 78px;
     height: 78px;
     background-color: #404054;
-    
 }
 
 .data_container {
@@ -69,6 +72,7 @@ button{
     display: flex;
     justify-content: center;
 }
+
 .element {
     margin: auto;
     display: flex;
@@ -76,12 +80,12 @@ button{
     gap: 12px;
 }
 
-.data{
+.data {
     font-size: 34px;
     font-weight: 200;
 }
 
-.text{
+.text {
     font-size: 20px;
     font-weight: 200;
 }
@@ -89,33 +93,36 @@ button{
 .icon {
     margin-top: 10px;
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
     .container {
         width: 100%;
         height: 100%;
         margin: auto;
         border-radius: 12px;
         background-image: url("Background.png");
-       }
-    .topbar{
+    }
+
+    .topbar {
         display: flex;
         justify-content: center;
         gap: 14px;
         padding-top: 150px;
         padding-bottom: 650px;
     }
-    .topbar input{
+
+    .topbar input {
         display: flex;
         width: 240px;
         height: 78px;
         border: none;
         outline: none;
-        background:  #404054;
+        background: #404054;
         border-radius: 40px;
         padding-left: 40px;
     }
-    
-    button{
+
+    button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -124,8 +131,8 @@ button{
         height: 50px;
         background-color: #404054;
         padding-top: 10px;
-        
-      }
+    }
+
     .search_icon {
         display: flex;
         justify-content: center;
@@ -133,9 +140,10 @@ button{
         border-radius: 40px;
         width: 50px;
         height: 50px;
-        background-color: #404054;  
+        background-color: #404054;
     }
-    .backWardButton{
+
+    .backWardButton {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -143,7 +151,6 @@ button{
         width: 78px;
         height: 78px;
         background-color: #404054;
-        
     }
 
 }
