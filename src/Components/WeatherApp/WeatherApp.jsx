@@ -183,7 +183,7 @@ const WeatherApp = () => {
   return (
     <div className="container">
       <div className="search_section"> {state === "Default" ? <div>
-        <Box display="flex" alignItems="center" justifyContent="center">
+        <Box display="flex" alignItems="center" justifyContent="center" marginTop="25px">
           <Image boxSize='50px' src={logo}></Image>
           <Text marginLeft="4" color='white' fontSize='3xl'>AlpWeather</Text>
         </Box>
@@ -197,9 +197,9 @@ const WeatherApp = () => {
               <input type="text" className="cityInput" placeholder="Search location" onKeyDown={handleKeyPress} />
             </div>
             <button onClick={searchByLocation} style={{ backgroundColor: '#404054', marginRight: '5px', marginLeft: '5px' }}><img src={gps} alt="" /></button>
-            <div className="search_icon" onClick={() => { search() }}>
+            <button className="search_icon" onClick={() => { search() }}>
               <img src={search_icon} alt="" />
-            </div>
+            </button>
           </div>
         </div></div> : <></>}
       </div>

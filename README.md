@@ -71,7 +71,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Özellikler
 -Responsive tasarım
+
 -Tek tıkla bulunduğun konuma göre hava durumu
+
 -Hava durumu sorgulama
+
 -Mevcut hava durumunu yansıtan görseller
+
 -Axios kullanımı
