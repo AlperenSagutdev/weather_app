@@ -11,8 +11,8 @@
     display: flex;
     justify-content: center;
     gap: 14px;
-    padding-top: 300px;
-    padding-bottom: 400px;
+    padding-top: 150px;
+    padding-bottom: 475px;
 }
 
 .topbar input {
@@ -107,8 +107,8 @@ button {
         display: flex;
         justify-content: center;
         gap: 14px;
-        padding-top: 200px;
-        padding-bottom: 500px;
+        padding-top: 100px;
+        padding-bottom: 385px;
     }
 
     .topbar input {
