@@ -21,7 +21,6 @@ import rain_day from '../Assets/Weather=Rain, Moment=Day.png'
 import rain_night from '../Assets/Weather=Rain, Moment=Night.png'
 import storm_day from '../Assets/Weather=Storm, Moment=Day.png'
 import storm_night from '../Assets/Weather=Storm, Moment=Night.png'
-import spinner_gap from '../Assets/Type=spinner-gap-regular.png'
 import wind_light from '../Assets/Type=wind-light.png'
 import thermometer from '../Assets/Type=thermometer-simple-light.png'
 import cloud_light from '../Assets/Type=cloud-rain-light.png'
@@ -31,7 +30,7 @@ import logo from '../Assets/Logo.png'
 import search_icon from '../Assets/magnifying-glass.png'
 import gps from '../Assets/gps.png'
 import arrow from '../Assets/arrow-left.png'
-import { Spinner, Text, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Box, Grid, GridItem, Image } from '@chakra-ui/react'
+import {Text, Table, Tbody, Tr, Td, TableContainer, Box, Grid, GridItem, Image, } from '@chakra-ui/react'
 
 const WeatherApp = () => {
   let api_key = "e51b5988d14ace6cf8ee1ce8935155aa";
@@ -185,16 +184,28 @@ const WeatherApp = () => {
 
   return (
     <div className="container">
-      <div className="search_section"> {state === "Default" ? <div>  <div className="topbar">
-        <div className="cityInput_Container">
-          <input type="text" className="cityInput" placeholder="Search location" onKeyDown={handleKeyPress} />
-          {loading && <Spinner color='blue.500' size="xs" />}
-        </div>
-        <button onClick={searchByLocation}><img src={gps} alt="" /></button>
-        <div className="search_icon" onClick={() => { search() }}>
-          <img src={search_icon} alt="" />
-        </div>
-      </div></div> : <></>}
+      <div className="search_section"> {state === "Default" ? <div>
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <Image boxSize='50px' src={logo}></Image>
+          <Text marginLeft="4" color='white' fontSize='3xl'>AlpWeather</Text>
+        </Box>
+
+
+        <div className="topbar" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Text fontSize='2xl' color="white" align="center">
+            Welcome to  <span style={{ color: "#8FB2F5" }}>AlpWeather</span>
+          </Text>
+          <Text color='gray' align="center">Choose a location to see the weather forecast</Text>
+          <div className="searchContainer">
+            <div className="cityInput_Container">
+              <input type="text" className="cityInput" placeholder="Search location" onKeyDown={handleKeyPress} />
+            </div>
+            <button onClick={searchByLocation} style={{ backgroundColor: '#404054', marginRight: '5px', marginLeft: '5px' }}><img src={gps} alt="" /></button>
+            <div className="search_icon" onClick={() => { search() }}>
+              <img src={search_icon} alt="" />
+            </div>
+          </div>
+        </div></div> : <></>}
 
       </div>
       <div className="weather_results"> {state === "Searched" && weatherData ? <div>
@@ -222,84 +233,78 @@ const WeatherApp = () => {
           <GridItem rowSpan={1} colSpan={1} >
             <Box display="flex" justifyContent="flex-start" alignItems="flex-start" flexDirection="column" p={4} style={{ boxShadow: 'none' }} background={backgroundImage}>
               <Box>
-                <Text color="white">Average Temperature: {Math.floor(weatherData.main.temp)} °C</Text>
-                <Text color="white">{Math.floor(weatherData.main.temp_min)} °C , {Math.floor(weatherData.main.temp_max)} °C</Text>
+                <Text color="white" fontSize="5xl"> {Math.floor(weatherData.main.temp)} °C</Text>
+                <Text color="white">{Math.floor(weatherData.main.temp_min)} °C/{Math.floor(weatherData.main.temp_max)} °C</Text>
                 <Text color="white">{weatherData.weather[0].description}</Text>
               </Box>
             </Box>
           </GridItem>
 
           <GridItem rowSpan={1} colSpan={1} >
-            <Box display="flex" justifyContent="center" alignItems="center" p={4}>
-              <Image src={wicon} alt="" size="100%"/>
+            <Box display="flex" justifyContent="flex-end" alignItems="flex-end" p={4}>
+              <Image src={wicon} alt="" size="100%" />
             </Box>
           </GridItem>
         </Grid>
-        <Grid templateColumns="1fr" gap={6} borderRadius="20">
+        <Grid templateColumns="1fr" gap={6} borderRadius="20" paddingTop={'20px'}>
           <GridItem color="black.300">
             <TableContainer>
               <Table variant='simple' colorScheme='whiteAlpha' size='sm'>
                 <Tbody>
                   <Tr>
                     <Td><img src={thermometer} alt="" /></Td>
-                    <Td color="white">Thermal Sensation</Td>
-                    <Td color="white">{Math.floor(weatherData.main.feels_like)} °C</Td>
+                    <Td textAlign={'center'} color="white">Thermal Sensation</Td>
+                    <Td textAlign={'right'} color="white">{Math.floor(weatherData.main.feels_like)} °C</Td>
                   </Tr>
                   <Tr>
                     <Td><img src={cloud_light} alt="" /></Td>
-                    <Td color="white">Probability of rain</Td>
-                    <Td color="white">{currentForecastData.day.daily_chance_of_rain} %</Td>
+                    <Td textAlign={'center'} color="white">Probability of rain</Td>
+                    <Td textAlign={'right'} color="white">{currentForecastData.day.daily_chance_of_rain} %</Td>
                   </Tr>
                   <Tr>
                     <Td><img src={wind_light} alt="" /></Td>
-                    <Td color="white">Wind Speed</Td>
-                    <Td color="white">{Math.floor(weatherData.wind.speed)} km/h</Td>
+                    <Td textAlign={'center'} color="white">Wind Speed</Td>
+                    <Td textAlign={'right'} color="white">{Math.floor(weatherData.wind.speed)} km/h</Td>
                   </Tr>
                   <Tr>
                     <Td><img src={drop_light} alt="" /></Td>
-                    <Td color="white">Air Humidty </Td>
-                    <Td color="white">{weatherData.main.humidity} %</Td>
+                    <Td textAlign={'center'} color="white">Air Humidty </Td>
+                    <Td textAlign={'right'} color="white">{weatherData.main.humidity} %</Td>
                   </Tr>
                   <Tr>
                     <Td><img src={sun_light} alt="" /></Td>
-                    <Td color="white">UV Index </Td>
-                    <Td color="white">{currentForecastData && currentForecastData.day ? currentForecastData.day.uv : '-'}</Td>
+                    <Td textAlign={'center'} color="white">UV Index </Td>
+                    <Td textAlign={'right'} color="white">{currentForecastData && currentForecastData.day ? currentForecastData.day.uv : '-'}</Td>
                   </Tr>
                 </Tbody>
               </Table>
             </TableContainer>
           </GridItem>
         </Grid>
-        <Grid templateColumns="1fr" gap={6} borderRadius="20">
-          <GridItem bg="black.300">
-              <TableContainer>
-                <Table variant='simple' colorScheme='whiteAlpha' size='sm' w='100%'>
-                  <Thead>
-                    <Tr>
-                      {forecastData.forecastday.slice(1, 6).map((day, index) => (
-                        <Th key={index}>{new Date(day.date).toLocaleDateString()}</Th>
-                      ))}
-                    </Tr>
-                  </Thead>
-                  <Tbody>
-                    <Tr>
-                      {forecastData.forecastday.slice(1, 6).map((day, index) => (
-                        <Td key={index} color="white">
-                          <img src={`http:${day.day.condition.icon}`} alt="Weather Icon" />
-                          <p> {Math.floor(day.day.maxtemp_c)} °C</p>
-                          <p> {Math.floor(day.day.mintemp_c)} °C</p>
-                        </Td>
-                      ))}
-                    </Tr>
-                  </Tbody>
-                </Table>
-              </TableContainer>
-          </GridItem>
+        <Grid templateColumns="repeat(5, 1fr)" templateRows="repeat(1, 1fr)" borderRadius="20" size='sm' paddingTop={'20px'}>
+          {forecastData.forecastday.slice(1, 6).map((day, index) => (
+            <GridItem key={index} color="white">
+              <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+                <Text fontSize={{ base: '12px', md: '14px', lg: '18px' }} loc>{new Date(day.date).toLocaleDateString()}</Text>
+                <Image boxSize="50px" src={`http:${day.day.condition.icon}`} alt="Weather Icon" />
+                <Text fontSize='sm'>{Math.floor(day.day.maxtemp_c)} °C</Text>
+                <Text color='gray' fontSize='sm'>{Math.floor(day.day.mintemp_c)} °C</Text>
+              </Box>
+            </GridItem>
+          ))}
         </Grid>
       </div> : <></>}
-        {state === "Searched" && (
-          <button onClick={resetState} gap="5px"><img src={arrow} alt="" /></button>
-        )}
+        <div>
+          {state === "Searched" && (
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div style={{marginTop: "24px"}}>
+                <button onClick={resetState} gap="5px" className="backWardButton" >
+                  <img src={arrow} alt="" /></button>
+              </div>
+            </div>
+          )}
+
+        </div>
 
       </div>
     </div>
